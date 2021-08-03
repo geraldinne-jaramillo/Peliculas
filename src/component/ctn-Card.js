@@ -118,29 +118,21 @@ export default function CtnCard(){
         </MainCard>
 )
 }
-//esta parte es para el consumo de api 
-//lo que sucede es que me trae 250 registro y pesa mucho y no es muy optimo
 
-    /* const Api = async () =>{
-        let lista = {}
-        let  res = await fetch(`https://api.tvmaze.com/shows?page=1`),
-        json = await res.json()
-            console.log(json)
+/*
 
-            json.map(el =>{
-                lista = {
-                    id : el.id,
-                    image:el.image.original,
-                    trainig:el.rating.average,
-                }
-            })
+ const getMovie = async()=>{
+        const response= database.collection('peliculas')
+        const data = await response.get();
 
+        data.docs.forEach(el =>{
+               // console.log(el.data())
+            const lista = {
+                img: el.data().imagen,
+                value: el.data().rating,
+            }
+            arr.push(lista)
+        })
 
-            setMovie((movie) => [...movie,lista]) 
-    }
-    useEffect(() => {
-        Api()
-    }, [movie]) */
-    //console.log(movie)
-
-
+        
+*/
